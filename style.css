@@ -102,3 +102,39 @@ transform:translateY(-120vh);
 opacity:0;
 }
 }
+.gift-page {
+    text-align: center;
+    margin-top: 80px;
+    font-family: Arial, sans-serif;
+}
+
+.gift-box {
+    font-size: 120px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    display: inline-block;
+}
+
+.gift-box:hover {
+    transform: scale(1.1);
+}
+
+.gift-box.open {
+    transform: rotate(20deg) scale(1.2);
+}
+
+#message {
+    font-size: 22px;
+    margin-top: 30px;
+}
+
+#nextButton {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background: #ff4d88;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 18px;
+}
