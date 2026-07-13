@@ -1,0 +1,104 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(180deg,#050816,#0b1026,#120f2e);
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+position:relative;
+}
+
+/* Stars */
+.star{
+position:absolute;
+width:2px;
+height:2px;
+background:white;
+border-radius:50%;
+animation:twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle{
+0%{opacity:.2;}
+100%{opacity:1;}
+}
+
+/* Moon */
+.moon{
+position:absolute;
+top:60px;
+right:70px;
+width:120px;
+height:120px;
+background:#fff;
+border-radius:50%;
+box-shadow:0 0 60px white;
+}
+
+/* Glass Card */
+.card{
+width:90%;
+max-width:700px;
+padding:40px;
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.2);
+border-radius:25px;
+backdrop-filter:blur(12px);
+text-align:center;
+z-index:10;
+}
+
+h1{
+font-size:48px;
+color:#ff77aa;
+margin-bottom:20px;
+}
+
+p{
+font-size:22px;
+line-height:1.7;
+margin-bottom:30px;
+}
+
+button{
+padding:16px 40px;
+border:none;
+border-radius:50px;
+font-size:20px;
+background:#ff2d75;
+color:white;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+background:#ff4b91;
+}
+
+/* Hearts */
+.heart{
+position:absolute;
+bottom:-20px;
+font-size:22px;
+animation:float 8s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
