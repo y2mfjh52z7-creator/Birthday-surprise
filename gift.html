@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A Special Gift 🎁</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="gift-page">
+        <h1>A little surprise for you ❤️</h1>
+
+        <div class="gift-box" onclick="openGift()">
+            🎁
+        </div>
+
+        <p id="message">Click the gift box 💝</p>
+
+        <a id="nextButton" href="birthday.html" style="display:none;">
+            Continue ❤️
+        </a>
+    </div>
+
+<script>
+function openGift(){
+    document.querySelector(".gift-box").innerHTML = "💖";
+    document.getElementById("message").innerHTML =
+    "This gift is filled with all my love and memories for you ❤️";
+
+    document.getElementById("nextButton").style.display = "inline-block";
+}
+</script>
+
+</body>
+</html>
