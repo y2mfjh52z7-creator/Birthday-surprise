@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Countdown ❤️</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: #ffe6f0;
+            padding-top: 100px;
+        }
+
+        h1 {
+            font-size: 35px;
+            color: #ff4d88;
+        }
+
+        #countdown {
+            font-size: 30px;
+            margin-top: 40px;
+            color: #333;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>A special day is coming... ❤️</h1>
+
+    <h2 id="countdown"></h2>
+
+
+<script>
+
+let birthday = new Date("2026-09-23T00:00:00+01:00").getTime();
+
+
+let timer = setInterval(function(){
+
+    let now = new Date().getTime();
+
+    let distance = birthday - now;
+
+
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    let hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60)
+    );
+
+    let minutes = Math.floor(
+        (distance % (1000 * 60 * 60)) /
+        (1000 * 60)
+    );
+
+    let seconds = Math.floor(
+        (distance % (1000 * 60)) / 1000
+    );
+
+
+    document.getElementById("countdown").innerHTML =
+    days + " Days " +
+    hours + " Hours " +
+    minutes + " Minutes " +
+    seconds + " Seconds";
+
+
+},1000);
+
+
+</script>
+
+</body>
+
+</html>
