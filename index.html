@@ -3,305 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Mehak ❤️</title>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
+<title>A Special Gift ❤️</title>
 
-body{
-background:linear-gradient(135deg,#090909,#1a1a40,#000);
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-overflow:hidden;
-color:white;
-text-align:center;
-}
-
-.container{
-width:90%;
-max-width:700px;
-background:rgba(255,255,255,.08);
-padding:30px;
-border-radius:25px;
-backdrop-filter:blur(10px);
-box-shadow:0 0 25px rgba(255,255,255,.2);
-z-index:10;
-}
-
-h1{
-font-size:38px;
-color:#ff5fa2;
-margin-bottom:20px;
-}
-
-#countdown{
-font-size:32px;
-font-weight:bold;
-margin:20px 0;
-color:#fff;
-}
-
-.message{
-font-size:20px;
-line-height:1.8;
-margin-top:20px;
-}
-
-button{
-margin-top:25px;
-padding:15px 35px;
-border:none;
-border-radius:40px;
-background:#ff2d75;
-color:white;
-font-size:20px;
-cursor:pointer;
-transition:.3s;
-}
-
-button:hover{
-transform:scale(1.1);
-}
-
-.heart{
-position:absolute;
-color:#ff4d88;
-font-size:25px;
-animation:float 8s linear infinite;
-}
-
-@keyframes float{
-0%{
-transform:translateY(100vh);
-opacity:1;
-}
-100%{
-transform:translateY(-120vh);
-opacity:0;
-}
-}
-
-canvas{
-position:fixed;
-top:0;
-left:0;
-pointer-events:none;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
-<canvas id="canvas"></canvas>
+<div class="moon"></div>
 
-<div class="container">
+<div class="card">
 
-<h1 id="title">❤️ Waiting For Mehak's Birthday ❤️</h1>
-
-<div id="countdown"></div>
-
-<div class="message" id="message">
-Every second brings us closer to your special day...
-</div>
-
-<button onclick="showLove()">❤️ Click Me ❤️</button>
-
-</div>
-
-<script>
-
-// Floating Hearts
-
-function createHeart(){
-
-const heart=document.createElement("div");
-
-heart.className="heart";
-
-heart.innerHTML="❤️";
-
-heart.style.left=Math.random()*100+"vw";
-
-heart.style.fontSize=(20+Math.random()*25)+"px";
-
-heart.style.animationDuration=(5+Math.random()*5)+"s";
-
-document.body.appendChild(heart);
-
-setTimeout(()=>{
-heart.remove();
-},9000);
-
-}
-
-setInterval(createHeart,350);
-
-
-// Countdown
-
-const birthday=new Date("September 23, 2026 00:00:00 GMT+0100").getTime();
-
-const timer=setInterval(function(){
-
-const now=new Date().getTime();
-
-const distance=birthday-now;
-
-if(distance<0){
-
-clearInterval(timer);
-
-document.getElementById("title").innerHTML="🎉 Happy Birthday Mehak 🎂❤️";
-
-document.getElementById("countdown").innerHTML="";
-
-document.getElementById("message").innerHTML=
-`
-<h2>My Dearest Mehak ❤️</h2>
+<h1>A Special Gift ❤️</h1>
 
 <p>
 
-Happy Birthday to the most beautiful person in my life.
+For Someone
 
-Even though miles separate us,
-
-my heart is always with you.
-
-I hope this year fills your life with happiness,
-
-success,
-
-peace,
-
-and countless smiles.
-
-Thank you for making my life brighter.
-
-No distance can ever change how special you are to me.
-
-Always remember...
-
-You are loved more than words can explain.
-
-❤️
-
-Happy Birthday, My Love.
-
-❤️
-
-Forever Yours,
-
-<b>Arman</b>
+Very Special...
 
 </p>
-`;
 
-confetti();
+<button onclick="window.location.href='story.html'">
 
-return;
+❤️ Open My Heart ❤️
 
-}
+</button>
 
-const days=Math.floor(distance/(1000*60*60*24));
+</div>
 
-const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-
-const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
-
-const seconds=Math.floor((distance%(1000*60))/1000);
-
-document.getElementById("countdown").innerHTML=
-
-days+" Days<br>"+
-
-hours+" Hours "+
-
-minutes+" Minutes "+
-
-seconds+" Seconds";
-
-},1000);
-
-
-// Love Button
-
-function showLove(){
-
-alert("❤️ I Love You Mehak ❤️\n\n— Arman");
-
-}
-
-
-// Simple Confetti
-
-function confetti(){
-
-const canvas=document.getElementById("canvas");
-
-const ctx=canvas.getContext("2d");
-
-canvas.width=window.innerWidth;
-
-canvas.height=window.innerHeight;
-
-let pieces=[];
-
-for(let i=0;i<250;i++){
-
-pieces.push({
-
-x:Math.random()*canvas.width,
-
-y:Math.random()*canvas.height-canvas.height,
-
-r:Math.random()*6+4,
-
-d:Math.random()*250
-
-});
-
-}
-
-function draw(){
-
-ctx.clearRect(0,0,canvas.width,canvas.height);
-
-ctx.fillStyle="gold";
-
-pieces.forEach(p=>{
-
-ctx.beginPath();
-
-ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-
-ctx.fill();
-
-p.y+=4;
-
-if(p.y>canvas.height){
-
-p.y=-20;
-
-}
-
-});
-
-requestAnimationFrame(draw);
-
-}
-
-draw();
-
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
+
 </html>
