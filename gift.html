@@ -23,13 +23,13 @@
 
 <script>
 function openGift(){
-    document.querySelector(".gift-box").innerHTML = "💖";
+    let gift = document.querySelector(".gift-box");
+
+    gift.classList.add("open");
+    gift.innerHTML = "💝";
+
     document.getElementById("message").innerHTML =
-    "This gift is filled with all my love and memories for you ❤️";
+    "Inside this gift is a piece of my heart ❤️<br>Every moment with you is precious.";
 
     document.getElementById("nextButton").style.display = "inline-block";
 }
-</script>
-
-</body>
-</html>
