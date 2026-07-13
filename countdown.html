@@ -6,22 +6,45 @@
 
     <style>
         body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background: #ffe6f0;
-            padding-top: 100px;
-        }
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #1a001f, #4d0039);
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 100px;
+}
 
-        h1 {
-            font-size: 35px;
-            color: #ff4d88;
-        }
+h1 {
+    font-size: 40px;
+    color: #ffb6d9;
+    text-shadow: 0 0 15px #ff69b4;
+}
 
-        #countdown {
-            font-size: 30px;
-            margin-top: 40px;
-            color: #333;
-        }
+#countdown {
+    font-size: 35px;
+    margin-top: 50px;
+    color: white;
+    text-shadow: 0 0 10px #ff69b4;
+}
+
+.heart {
+    position: absolute;
+    font-size: 25px;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        top: -10%;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        top: 110%;
+        transform: rotate(360deg);
+    }
+}
     </style>
 
 </head>
@@ -31,7 +54,9 @@
     <h1>A special day is coming... ❤️</h1>
 
     <h2 id="countdown"></h2>
-
+<div class="heart">❤️</div>
+<div class="heart">💗</div>
+<div class="heart">💖</div>
 
 <script>
 
