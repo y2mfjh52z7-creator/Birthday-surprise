@@ -59,6 +59,26 @@
         transform: scale(1);
     }
 }
+        .final-message {
+    margin-top: 50px;
+    font-size: 28px;
+    color: #ff3366;
+    opacity: 0;
+    animation: appear 3s forwards;
+    animation-delay: 2s;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
     </style>
 
 </head>
@@ -77,10 +97,8 @@
     Thank you for bringing happiness and love into my life.<br><br>
 
     You deserve all the happiness in the world ❤️
-</p>
-
-<div class="hearts">
-    ❤️ 💖 💕 💗 💘
+<div class="final-message">
+    I love you forever and ever and ever and ever ❤️
 </div>
 
 
